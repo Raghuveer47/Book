@@ -1,38 +1,158 @@
-.App {
+/* Add styles for navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+nav form {
+  display: flex;
+}
+
+nav input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px 0 0 3px;
+}
+
+nav button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #0056b3;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+}
+
+/* Add styles for book list */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.book-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.book-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.book-card h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.book-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
 }
 
-.App-link {
-  color: #61dafb;
+.book-card button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Add styles for footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  text-align: center;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increase the minimum width of columns */
+  gap: 20px;
+}
+
+.book-card {
+  text-align: center;
+  padding: 20px; /* Increase the padding for a bigger card size */
+  border: 1px solid #ccc; /* Add a border for visual separation */
+}
+
+.book-card img {
+  width: 100%;
+  height: 100%; /* Change height to 100% for the image to fill the available space */
+  object-fit: contain; /* Use object-fit: contain to fit the full image within the container */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book-card h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.book-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.book-card button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.about-us {
+  margin-bottom: 20px;
+}
+
+.about-us h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-us p {
+  font-size: 16px;
+  line-height: 1.5;
 }

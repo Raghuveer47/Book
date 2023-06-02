@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import BookList from './component/BookList';
+import Navbar from './component/Navbar';
+import Footer from './component/Footer';
 import './App.css';
 
-function App() {
+const books = [
+  {
+    title: 'Book 1',
+    author: 'Author 1',
+    image: 'book1.jpg',
+    buttonText: 'Read Now',
+  },
+  // Add more books here
+];
+
+const App = () => {
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = (searchTerm) => {
+    const results = books.filter((book) =>
+      book.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setSearchResults(results);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar handleSearch={handleSearch} />
+      <BookList books={searchResults.length > 0 ? searchResults : books} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
